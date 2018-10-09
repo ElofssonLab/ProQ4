@@ -1,0 +1,6 @@
+numpy
+Cython
+scipy
+keras
+h5py
+Biopython

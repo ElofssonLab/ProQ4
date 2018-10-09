@@ -1,0 +1,4 @@
+include proq4/models/pq4_v1.h5
+global-include *.pyx *.c
+include requirements.txt
+
