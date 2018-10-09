@@ -1,5 +1,7 @@
 # ProQ4:
-blabla
+Protein Quality Estimation.
+
+https://arxiv.org/abs/1804.06281
 
 ## Installation instructions:
 
