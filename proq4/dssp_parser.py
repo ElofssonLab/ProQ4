@@ -2,6 +2,7 @@ import math
 
 import numpy as np
 from Bio.PDB import DSSP, PDBParser
+import distutils.spawn
 
 p = PDBParser(QUIET=1)
 
@@ -13,9 +14,12 @@ ss_dict['-'] = 5
 def parse(pdb, seq_len):
     structure = p.get_structure('', pdb)
     model = structure[0]
+    if not distutils.spawn.find_executable("dssp"):
+        print ("ERROR dssp not founs")
     try:
         dssp = DSSP(model, pdb, acc_array='Wilke')
     except:
+        print ("ERROR DSSP failed")
         return
 
     six_state = np.zeros((seq_len, 6), dtype=np.float32)
