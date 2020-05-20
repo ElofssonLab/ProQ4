@@ -1,0 +1,13 @@
+Bootstrap: docker
+From: tensorflow/tensorflow:2.1.1-gpu
+
+%files
+    /home/gabriele/Desktop/ProQ4 /opt/ 
+
+%post
+    apt-get update && apt-get install -y python3-pip vim
+
+    apt-get install -y dssp python3-biopython python3-setuptools 
+    python3 -m pip install numpy Cython keras pandas tables tqdm h5py gast
+
+    cd /opt/ProQ4 && python3 setup.py build_ext --inplace
