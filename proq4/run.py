@@ -2,7 +2,7 @@ from __future__ import unicode_literals
 import collections
 import numpy as np
 
-import dssp_parser
+from proq4 import dssp_parser
 
 proq4_result = collections.namedtuple('ProQ4_results', ('lddt', 'raw_classes'))
 
